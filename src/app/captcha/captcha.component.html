@@ -1,0 +1,35 @@
+<div class="container captcha-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-right">
+                <button type="button" class="btn btn-primary" (click)="goHome()">Volver al inicio</button>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card-body text-center stamp-container">
+                <p class="card-text">Sello a descifrar</p>
+                <img [src]="this.sessionService.getCaptchaLock()" class="arrow-stamp" />
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="card-body text-center">
+                <p class="title">Descifre los sellos</p>
+                <img class="arrow-left" src="../assets/img/arrow-rotate.png" (click)="turnLeft(1)" />
+                <img class="spark" [style.-webkit-animation-name]="sparkStyleWebkit1" style="-webkit-animation-duration: 1s;" [style.transform]="sparkStyleTransform1" src="../assets/img/spark.png" />
+                <img class="arrow-right" src="../assets/img/arrow-rotate.png" (click)="turnRight(1)" />
+                <img class="arrow-left" src="../assets/img/arrow-rotate.png" (click)="turnLeft(2)" />
+                <img class="spark" [style.-webkit-animation-name]="sparkStyleWebkit2" style="-webkit-animation-duration: 1s;" [style.transform]="sparkStyleTransform2" src="../assets/img/spark.png" />
+                <img class="arrow-right" src="../assets/img/arrow-rotate.png" (click)="turnRight(2)" />
+                <img class="arrow-left" src="../assets/img/arrow-rotate.png" (click)="turnLeft(3)" />
+                <img class="spark" [style.-webkit-animation-name]="sparkStyleWebkit3" style="-webkit-animation-duration: 1s;" [style.transform]="sparkStyleTransform3" src="../assets/img/spark.png" />
+                <img class="arrow-right" src="../assets/img/arrow-rotate.png" (click)="turnRight(3)" />
+                <img class="arrow-left" src="../assets/img/arrow-rotate.png" (click)="turnLeft(4)" />
+                <img class="spark" [style.-webkit-animation-name]="sparkStyleWebkit4" style="-webkit-animation-duration: 1s;" [style.transform]="sparkStyleTransform4" src="../assets/img/spark.png" />
+                <img class="arrow-right" src="../assets/img/arrow-rotate.png" (click)="turnRight(4)" />
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="#aaa" size="medium" color="#000" type="ball-scale-multiple">
+    <p style="font-size: 20px; color:black;">{{ spinnerText }}</p>
+</ngx-spinner>
